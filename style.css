@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('green.jpg') no-repeat center center/cover; /* Default background image */
+    background-color: #ffffff; /* Fallback background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+
+.banner {
+    background-color: #4CAF50;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.container {
+    
+    
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 20px;
+    padding: 5vw;
+    margin-top: 40px;
+    text-align: center;
+    position: relative; /* Allows profile image positioning */
+    box-sizing: border-box;
+}
+
+
+.content {
+    display: flex;
+    align-items: flex-start; /* Aligns profile info and projects to the top */
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.left-section {
+    flex: 1;
+    text-align: left;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.profile-info h1 {
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: clamp(3rem, 6vw, 4rem);
+    text-shadow: 2px 3px 0px #b5b8b5;
+    animation: float 3s ease-out infinite;
+}
+@keyframes float {
+    50%{
+        transform: translateY(30px);
+    }
+}
+
+.profile-info p {
+    margin-top: 10px 0;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: clamp(2rem, 10vw, 6rem);
+    text-shadow: 2px 3px 0px #b5b8b5;
+    font-style: italic;
+    animation: float 3s ease-out infinite
+}
+@keyframes float {
+    50%{
+        transform: translateY(30px);
+    }
+}
+
+.profile-info p {
+    margin: 10px 0;
+    color: #fffefe;
+    font-weight: bold;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-style: italic;
+    text-shadow: 2px 3px 0px #b5b8b5;
+    animation: float 3s ease-out infinite
+}
+@keyframes float {
+    50%{
+        transform: translateY(30px);
+    }
+}
+
+.profile-image {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: clamp(250px, 30vw, 350px);
+    height: clamp(440px, 30vw, 350px);
+    border-radius: 60%;
+
+    overflow: hidden; /* Ensures image stays inside the circle */
+    background-color: transparent; /* Removed default grey */
+    animation: animate 5s  ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+@keyframes animate{
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle properly */
+   
+}
+
+
+.projects {
+    display: flex;
+    gap: 30px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: transparent; /* Removed background */
+    border: none;                  /* Removed border */
+    padding: 0;                    /* Removed padding */
+    text-align: center;
+}
+
+
+.icon {
+    width: 80px;
+    height: 80px;
+    background-color: #d9d9d9;
+    border-radius: 30px;
+    overflow: hidden; /* Ensures image stays inside the circle */
+    margin: 0 auto 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fit well inside circles */
+}
+
+.project p {
+    margin: 0;
+    font-weight: bold;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #000000; /* Black text color */
+}
+button {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    width: 140px;
+    margin-top: 5px;
+}
+
+button{
+    background-color: #ffffff;
+    color: #080808;
+}
+button:hover {
+    background-color: #030303;
+    color: #f7a1a1; 
+
+}
+
+blue {
+    background-color: #ffffff;
+}
+
+blue:hover .stars {
+    background-color: #ffffff;
+}
